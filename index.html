@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5f59ca6ad3.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class = "mb-5">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+            <div class=container>
+                <a class="navbar-brand" href="#"><img src="" class="" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ml-auto">
+                        <a class="nav-link active" id="navItem1" href="#">Why Choose Us ? <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" id="navItem2" href="#">Explore Menu</a>
+                        <a class="nav-link" id="navItem3" href="#">Delivery & Payment</a>
+                        <a class="nav-link" id="navItem4" href="#">Follow Us</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+
+
+    <div id="weatherContainer" class="bg-image-sunny">
+        <h1 class="weather-info pt-3">Weather Info</h1>
+        <div class="d-flex flex-row justify-content-center">
+            <input id="searchInput" placeholder="Please Enter City" class="search-box" />
+            <div class = "search-icon-con">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-search mt-2 ml-2 " viewBox="0 0 16 16" id="getButton">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg>
+            </div>
+            <!-- <button id="getButton" class="button-size">Get Details</button> -->
+        </div>
+
+
+        <div id="totalContainer">
+            <div class="">
+                <div class="d-flex flex-row justify-content-center">
+                    <div class="main-card-details shadow-lg" id="mainCardColorChange">
+                        <!-- <p id="mainCityName" class="main-city-name"></p> -->
+                        <div class = "row">
+                            <div class = "col-6">
+                                <h1 id="mainCityName" class="main-city-name">City-name</h1>
+                                <h1 id="mainTemp" class="main-temp-align">00°</h1>
+                                <p id="currentCondition" class="current-condition-name">Weather-type</p>
+                            </div>
+                            <div class="col-6">
+                                <!-- <img src="https://res.cloudinary.com/dkzl2tjrp/image/upload/v1691405515/Group_2_iedmea.png" height="120" width="120" class="cloud-icon d-none" id="cloudyIcon" /> -->
+                                <!-- <img src="https://res.cloudinary.com/dkzl2tjrp/image/upload/v1691406957/Bitmap_kd2fnf.png" height="125" width="135" class="cloud-icon d-none" id="rainCloud" /> -->
+                                <!-- <img src="https://res.cloudinary.com/dkzl2tjrp/image/upload/v1691407887/Bitmap_1_liywa0.png" height="125" width="130" class="cloud-icon d-none" id="sunIcon" /> -->
+                                <img src = "weather-pics/Cloud sunset.png" class="cloud-icon d-none" id="cloudyIcon"/>
+                                <img src = "weather-pics/Sun.png" class="cloud-icon d-none mt-2" id="sunIcon"/>
+                                <img src = "weather-pics/Cloud mid rain.png" class="cloud-icon d-none" id="rainCloud"/>
+                                <img src = "weather-pics/thunder.png" class="cloud-icon d-none" id="thunderIcon"/>
+                                <img src = "weather-pics/Cloud little rain.png" class="cloud-icon d-none" id="drizzleIcon"/>
+                                <img src = "weather-pics/Big snow little snow.png" class="cloud-icon d-none" id="snowIcon"/>
+                                <img src = "weather-pics/mist.png" class="cloud-icon d-none" id="mistIcon"/>
+                                <img src = "weather-pics/Slow winds.png" class="cloud-icon d-none" id="windIcon"/>
+                                
+                            </div>
+                        </div>
+                        <!-- <div>
+                            <p id="mainTemp" class="main-temp-align">00°</p>
+                            <p id="currentCondition" class="main-city-name"></p>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class = "d-flex flex-row justify-content-center">
+                    <div class = "small-container-2" id = "timeIntervalContainer">
+                        <div class = "d-flex flex-row">
+                            <div class = "">
+                                <h1 class = "small-container-2-text" id = "currentCondition">Now</h1>
+                                <img id = "smallIcon"/>
+                                <h1 class = "small-container-2-text">41</h1>
+                            </div>
+                            <div class = "">
+                                <h1 class = "small-container-2-text" id = "currentCondition">Now</h1>
+                                <img id = "smallIcon"/>
+                                <h1 class = "small-container-2-text">41</h1>
+                            </div>
+                            <div class = "">
+                                <h1 class = "small-container-2-text" id = "currentCondition">Now</h1>
+                                <img id = "smallIcon"/>
+                                <h1 class = "small-container-2-text">41</h1>
+                            </div>
+                            <div class = "">
+                                <h1 class = "small-container-2-text" id = "currentCondition">Now</h1>
+                                <img id = "smallIcon"/>
+                                <h1 class = "small-container-2-text">41</h1>
+                            </div>
+                            <div class = "">
+                                <h1 class = "small-container-2-text" id = "currentCondition">Now</h1>
+                                <img id = "smallIcon"/>
+                                <h1 class = "small-container-2-text">41</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6 col-sm-6 col-md-6 col-lg-5 col-xl-4 d-inline d-sm-none d-lg-none d-xl-none">
+                            <div class="small-container shadow" id="smallContainerColor">
+                                <i class="bi bi-thermometer-half"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="orange" class="bi bi-thermometer-half small-container-icon" viewBox="0 0 16 16">
+                                    <path d="M9.5 12.5a1.5 1.5 0 1 1-2-1.415V6.5a.5.5 0 0 1 1 0v4.585a1.5 1.5 0 0 1 1 1.415z" />
+                                    <path d="M5.5 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0V2.5zM8 1a1.5 1.5 0 0 0-1.5 1.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0l-.166-.15V2.5A1.5 1.5 0 0 0 8 1z" />
+                                </svg>
+                                <p class="small-container-text" id="feelsLikeText">Feels like</p>
+                                <p id="feelsLikeValue" class = "small-container-value"></p>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-6 col-md-6 col-lg-5 col-xl-4 d-inline d-sm-none d-lg-none d-xl-none">
+                            <div class="small-container shadow" id="smallContainerColor2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="orange" class="bi bi-wind small-container-icon" viewBox="0 0 16 16">
+                                    <path d="M12.5 2A2.5 2.5 0 0 0 10 4.5a.5.5 0 0 1-1 0A3.5 3.5 0 1 1 12.5 8H.5a.5.5 0 0 1 0-1h12a2.5 2.5 0 0 0 0-5zm-7 1a1 1 0 0 0-1 1 .5.5 0 0 1-1 0 2 2 0 1 1 2 2h-5a.5.5 0 0 1 0-1h5a1 1 0 0 0 0-2zM0 9.5A.5.5 0 0 1 .5 9h10.042a3 3 0 1 1-3 3 .5.5 0 0 1 1 0 2 2 0 1 0 2-2H.5a.5.5 0 0 1-.5-.5z" />
+                                </svg>
+                                <p class="small-container-text" id="windText"> Wind Speed</p>
+                                <p id="windSpeedValue" class = "small-container-value"></p>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-6 col-md-6 col-lg-5 col-xl-4 d-inline d-sm-none d-lg-none d-xl-none">
+                            <div class="small-container shadow" id="smallContainerColor3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="orange" class="bi bi-moisture small-container-icon" viewBox="0 0 16 16">
+                                    <path d="M13.5 0a.5.5 0 0 0 0 1H15v2.75h-.5a.5.5 0 0 0 0 1h.5V7.5h-1.5a.5.5 0 0 0 0 1H15v2.75h-.5a.5.5 0 0 0 0 1h.5V15h-1.5a.5.5 0 0 0 0 1h2a.5.5 0 0 0 .5-.5V.5a.5.5 0 0 0-.5-.5h-2zM7 1.5l.364-.343a.5.5 0 0 0-.728 0l-.002.002-.006.007-.022.023-.08.088a28.458 28.458 0 0 0-1.274 1.517c-.769.983-1.714 2.325-2.385 3.727C2.368 7.564 2 8.682 2 9.733 2 12.614 4.212 15 7 15s5-2.386 5-5.267c0-1.05-.368-2.169-.867-3.212-.671-1.402-1.616-2.744-2.385-3.727a28.458 28.458 0 0 0-1.354-1.605l-.022-.023-.006-.007-.002-.001L7 1.5zm0 0-.364-.343L7 1.5zm-.016.766L7 2.247l.016.019c.24.274.572.667.944 1.144.611.781 1.32 1.776 1.901 2.827H4.14c.58-1.051 1.29-2.046 1.9-2.827.373-.477.706-.87.945-1.144zM3 9.733c0-.755.244-1.612.638-2.496h6.724c.395.884.638 1.741.638 2.496C11 12.117 9.182 14 7 14s-4-1.883-4-4.267z" />
+                                </svg>
+                                <p class="small-container-text" id="humidityText"> Humidity</p>
+                                <p id="humidityValue" class = "small-container-value"></p>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-6 col-md-6 col-lg-5 col-xl-4 d-inline d-sm-none d-lg-none d-xl-none">
+                            <div class="small-container shadow" id="smallContainerColor4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="orange" class="bi bi-eye small-container-icon" viewBox="0 0 16 16">
+                                    <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z" />
+                                    <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
+                                </svg>
+                                <p class="small-container-text" id="visibilityText"> Visibility</p>
+                                <p id="visibilityValue" class = "small-container-value"></p>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-6 col-md-6 col-lg-5 col-xl-4 d-inline d-sm-none d-lg-none d-xl-none">
+                            <div class="small-container shadow" id="smallContainerColor5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="orange" class="bi bi-arrows-collapse small-container-icon" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8Zm7-8a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 4.293V.5A.5.5 0 0 1 8 0Zm-.5 11.707-1.146 1.147a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 11.707V15.5a.5.5 0 0 1-1 0v-3.793Z" />
+                                </svg>
+                                <p class="small-container-text" id="airPreText"> Air Pressure</p>
+                                <p id="airPreValue" class = "small-container-value"></p>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-6 col-md-6 col-lg-5 col-xl-4 d-inline d-sm-none d-lg-none d-xl-none">
+                            <div class="small-container shadow" id="smallContainerColor6">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="orange" class="bi bi-flag small-container-icon" viewBox="0 0 16 16">
+                                    <path d="M14.778.085A.5.5 0 0 1 15 .5V8a.5.5 0 0 1-.314.464L14.5 8l.186.464-.003.001-.006.003-.023.009a12.435 12.435 0 0 1-.397.15c-.264.095-.631.223-1.047.35-.816.252-1.879.523-2.71.523-.847 0-1.548-.28-2.158-.525l-.028-.01C7.68 8.71 7.14 8.5 6.5 8.5c-.7 0-1.638.23-2.437.477A19.626 19.626 0 0 0 3 9.342V15.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 1 0v.282c.226-.079.496-.17.79-.26C4.606.272 5.67 0 6.5 0c.84 0 1.524.277 2.121.519l.043.018C9.286.788 9.828 1 10.5 1c.7 0 1.638-.23 2.437-.477a19.587 19.587 0 0 0 1.349-.476l.019-.007.004-.002h.001M14 1.221c-.22.078-.48.167-.766.255-.81.252-1.872.523-2.734.523-.886 0-1.592-.286-2.203-.534l-.008-.003C7.662 1.21 7.139 1 6.5 1c-.669 0-1.606.229-2.415.478A21.294 21.294 0 0 0 3 1.845v6.433c.22-.078.48-.167.766-.255C4.576 7.77 5.638 7.5 6.5 7.5c.847 0 1.548.28 2.158.525l.028.01C9.32 8.29 9.86 8.5 10.5 8.5c.668 0 1.606-.229 2.415-.478A21.317 21.317 0 0 0 14 7.655V1.222z" />
+                                </svg>
+                                <p class="small-container-text" id="countryText"> Country</p>
+                                <p id="counteryValue" class = "small-container-value"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="d-none" id="nameErr">please enter city name</p>
+                <!-- </div> -->
+                <!--  <button id="clearButton" class="mt-4">Clear Details</button> -->
+                <!-- <button id="clearButton" class="">Clear Details</button> -->
+            </div>
+        </div>
+    </div>
+
+
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-bottom">
+            <div class= "container bottom-nav-height">
+
+                
+                
+
+
+                <!-- <a class="navbar-brand" href="#"><img src="" class="" />
+                </a> -->
+            </div>
+        </nav>
+    </div> 
+
+
+
+
+    <!-- <button id="clearButton" class="">Clear Details</button> -->
+    <!-- <button id="getButton" onclick="getData()">Get Details</button> -->
+
+    <script src="index.js"></script>
+</body>
+
+</html>
