@@ -28,7 +28,28 @@ let windIconEl = document.getElementById("windIcon");
 
 
 
-let smallIconEl = document.getElementById("smallIcon");
+let smallCloudEl = document.getElementById("smallCloud");
+
+let smallSunnyEl = document.getElementById("smallSun");
+
+let smallRainEl = document.getElementById("smallRain");
+
+let smallThunderEl = document.getElementById("smallThunder");
+
+let smallDrizzleEl = document.getElementById("smallDrizzle");
+
+let smallSnowEl = document.getElementById("smallSnow");
+
+let smallMistEl = document.getElementById("smallMist");
+
+let smallHazeEl = document.getElementById("smallHaze");
+
+
+
+
+// let cloudContainerSmallEl = document.getElementById("cloudContainerSmall");
+
+// let sunContainerSmallEl = document.getElementById("sunContainerSmall");
 
 
 
@@ -88,6 +109,9 @@ let airPreTextEl = document.getElementById("airPreText");
 let countryTextEl = document.getElementById("countryText");
 
 
+let nowConditionEl = document.getElementById("nowCondition");
+
+
 
 
 function getWeatherDetails(weather, locationId) {
@@ -139,6 +163,18 @@ function getWeatherDetails(weather, locationId) {
         mistIconEl.classList.add("d-none");
         windIconEl.classList.add("d-none");
 
+        smallSunnyEl.classList.add("icons-size");
+        nowConditionEl.textContent = Math.round(weather.main.temp) + "°";
+        smallSunnyEl.classList.remove("d-none");
+        smallCloudEl.classList.add("d-none");
+        smallRainEl.classList.add("d-none");
+        smallThunderEl.classList.add("d-none");
+        smallDrizzleEl.classList.add("d-none");
+        smallSnowEl.classList.add("d-none");
+        smallHazeEl.classList.add("d-none");
+        smallMistEl.classList.add("d-none");
+
+
         mainCardColorChangeEl.style.backgroundColor = "rgba(34,27,219,0.5)";
         smallContainerColorEl.style.backgroundColor = "rgba(34,27,219,0.4)";
         smallContainerColorEl2.style.backgroundColor = "rgba(34,27,219,0.4)";
@@ -185,6 +221,18 @@ function getWeatherDetails(weather, locationId) {
         windIconEl.classList.add("d-none");
 
 
+        smallCloudEl.classList.add("icons-size");
+        nowConditionEl.textContent = Math.round(weather.main.temp) + "°";
+        smallSunnyEl.classList.add("d-none");
+        smallCloudEl.classList.remove("d-none");
+        smallRainEl.classList.add("d-none");
+        smallThunderEl.classList.add("d-none");
+        smallDrizzleEl.classList.add("d-none");
+        smallSnowEl.classList.add("d-none");
+        smallHazeEl.classList.add("d-none");
+        smallMistEl.classList.add("d-none");
+
+
 
         smallContainerColorEl.style.backgroundColor = "rgba(144, 144, 172, 0.5)";
         smallContainerColorEl2.style.backgroundColor = "rgba(144, 144, 172,0.5)";
@@ -222,17 +270,6 @@ function getWeatherDetails(weather, locationId) {
         weatherContainerEl.style.backgroundSize = "cover";
     }
 
-    if(weather.weather[0].main === "Clouds"){
-        smallIconEl.style.backgroundImage = "url('weather-pics/icons-folder/clouds.png')";
-        smallIconEl.classList.add("icons-size");
-
-    }
-
-    if(weather.weather[0].main === "Clear") {
-        smallIconEl.classList.add("d-none");
-    }
-
-
     if (weather.weather[0].main === "Rain") {
 
 
@@ -244,6 +281,19 @@ function getWeatherDetails(weather, locationId) {
         snowIconEl.classList.add("d-none");
         mistIconEl.classList.add("d-none");
         windIconEl.classList.add("d-none");
+
+
+        smallSunnyEl.classList.add("icons-size");
+        nowConditionEl.textContent = Math.round(weather.main.temp) + "°";
+        smallSunnyEl.classList.add("d-none");
+        smallCloudEl.classList.add("d-none");
+        smallRainEl.classList.remove("d-none");
+        smallThunderEl.classList.add("d-none");
+        smallDrizzleEl.classList.add("d-none");
+        smallSnowEl.classList.add("d-none");
+        smallHazeEl.classList.add("d-none");
+        smallMistEl.classList.add("d-none");
+
 
 
         mainCityNameEl.style.color = "white";
@@ -298,6 +348,19 @@ function getWeatherDetails(weather, locationId) {
         windIconEl.classList.add("d-none");
 
 
+        smallSunnyEl.classList.add("icons-size");
+        nowConditionEl.textContent = Math.round(weather.main.temp) + "°";
+        smallSunnyEl.classList.add("d-none");
+        smallCloudEl.classList.add("d-none");
+        smallRainEl.classList.add("d-none");
+        smallThunderEl.classList.remove("d-none");
+        smallDrizzleEl.classList.add("d-none");
+        smallSnowEl.classList.add("d-none");
+        smallHazeEl.classList.add("d-none");
+        smallMistEl.classList.add("d-none");
+
+
+
         mainCityNameEl.style.color = "white";
         mainTempEl.style.color = "white";
 
@@ -347,6 +410,20 @@ function getWeatherDetails(weather, locationId) {
         snowIconEl.classList.add("d-none");
         mistIconEl.classList.add("d-none");
         windIconEl.classList.add("d-none");
+
+
+        smallSunnyEl.classList.add("icons-size");
+        nowConditionEl.textContent = Math.round(weather.main.temp) + "°";
+        smallSunnyEl.classList.add("d-none");
+        smallCloudEl.classList.add("d-none");
+        smallRainEl.classList.add("d-none");
+        smallThunderEl.classList.add("d-none");
+        smallDrizzleEl.classList.remove("d-none");
+        smallSnowEl.classList.add("d-none");
+        smallHazeEl.classList.add("d-none");
+        smallMistEl.classList.add("d-none");
+        
+
 
 
         mainCityNameEl.style.color = "#53656f";
@@ -399,6 +476,18 @@ function getWeatherDetails(weather, locationId) {
         windIconEl.classList.add("d-none");
 
 
+        
+        smallSunnyEl.classList.add("icons-size");
+        nowConditionEl.textContent = Math.round(weather.main.temp) + "°";
+        smallSunnyEl.classList.add("d-none");
+        smallCloudEl.classList.add("d-none");
+        smallRainEl.classList.add("d-none");
+        smallThunderEl.classList.add("d-none");
+        smallDrizzleEl.classList.add("d-none");
+        smallSnowEl.classList.remove("d-none");
+        smallHazeEl.classList.add("d-none");
+        smallMistEl.classList.add("d-none");
+
 
         mainCityNameEl.style.color = "#c79974";
         mainTempEl.style.color = "#c79974";
@@ -448,6 +537,18 @@ function getWeatherDetails(weather, locationId) {
         snowIconEl.classList.add("d-none");
         mistIconEl.classList.remove("d-none");
         windIconEl.classList.add("d-none");
+
+
+        smallSunnyEl.classList.add("icons-size");
+        nowConditionEl.textContent = Math.round(weather.main.temp) + "°";
+        smallSunnyEl.classList.add("d-none");
+        smallCloudEl.classList.add("d-none");
+        smallRainEl.classList.add("d-none");
+        smallThunderEl.classList.add("d-none");
+        smallDrizzleEl.classList.add("d-none");
+        smallSnowEl.classList.add("d-none");
+        smallMistEl.classList.remove("d-none");
+        smallHazeEl.classList.add("d-none");
 
 
 
@@ -502,6 +603,17 @@ function getWeatherDetails(weather, locationId) {
         windIconEl.classList.remove("d-none");
 
 
+        smallSunnyEl.classList.add("icons-size");
+        nowConditionEl.textContent = Math.round(weather.main.temp) + "°";
+        smallSunnyEl.classList.add("d-none");
+        smallCloudEl.classList.add("d-none");
+        smallRainEl.classList.add("d-none");
+        smallThunderEl.classList.add("d-none");
+        smallDrizzleEl.classList.add("d-none");
+        smallSnowEl.classList.add("d-none");
+        smallMistEl.classList.add("d-none");
+        smallHazeEl.classList.remove("d-none");
+
 
         mainCityNameEl.style.color = "white";
         mainTempEl.style.color = "white";
@@ -538,7 +650,6 @@ function getWeatherDetails(weather, locationId) {
         weatherContainerEl.style.backgroundImage = "url('weather-pics/haze-bg.jpg')";
         weatherContainerEl.style.backgroundSize = "cover";
     }    
-
 
 
 
