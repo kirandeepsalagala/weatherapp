@@ -13,29 +13,6 @@
 
 <body>
 
-    <!-- <div class = "mb-5">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-            <div class=container>
-                <a class="navbar-brand" href="#"><img src="" class="" />
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav ml-auto">
-                        <a class="nav-link active" id="navItem1" href="#">Why Choose Us ? <span class="sr-only">(current)</span></a>
-                        <a class="nav-link" id="navItem2" href="#">Explore Menu</a>
-                        <a class="nav-link" id="navItem3" href="#">Delivery & Payment</a>
-                        <a class="nav-link" id="navItem4" href="#">Follow Us</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </div> -->
-
-
-
-
     <div id="weatherContainer" class="bg-image-sunny">
         <h1 class="weather-info pt-3">Weather Info</h1>
         <div class="d-flex flex-row justify-content-center">
@@ -99,12 +76,17 @@
                                 <img src = "weather-pics/icons-folder/haze-icon.png" class = "small-icons-size d-none" id = "smallHaze" />
                                 <h1 class = "small-container-2-text pt-3" id = "nowCondition">41</h1>
                             </div>
-                            <div>
+
+
+                            <!-- hourley forecast 2 column -->
+
+
+                            <!-- <div>
                                 <h1 class = "small-container-2-text pt-3">Now</h1>
                                 <img src = "weather-pics/icons-folder/cloud-icon.png" id = "smallCloud" class = "small-icons-size" />
                                 <img src = "weather-pics/icons-folder/sunny.png" class="small-icons-size d-none" id = "smallSun"/>
                                 <h1 class = "small-container-2-text pt-3" id = "nowCondition">41</h1>
-                            </div>
+                            </div> -->
                             
                             <!-- <div>
                                 <img src = "weather-pics/Cloud little rain.png" class="small-icons-size"/>
@@ -204,23 +186,49 @@
         </div>
     </div>
 
+    <div id = "profileContainer" class = "d-none">
+        <div class = "profile-container d-flex flex-row justify-content-center">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="weather-pics/profile-image.png" class = "profile">
+                    <h1 class="profile-name">KIRAN DEEP</h1>
+                    <h1 class="profile-desc">Intern Web Developer</h1>
+                    <p class="profile-desc">Email:- Kiran.shine3@gmail.com</p>
+                  </div>
+                  <div class="flip-card-back">
+                    <h1 class="profile-name">Technologys Used</h1>
+                    <hr>
+                    <ul>
+                        <li class = "pt-3">HTML</li>
+                        <li class = "pt-3">CSS</li>
+                        <li class = "pt-3">JAVA SCRIPT</li>
+                        <li class = "pt-3">BOOTSTRAP</li>
+                    </ul>
+                    <p></p>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div>
         <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-bottom">
             <div class= "container bottom-nav-height">
-
-                
-                
-
-
-                <!-- <a class="navbar-brand" href="#"><img src="" class="" />
-                </a> -->
+                <div class = "d-flex flex-row justify-content-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-house-door-fill nav-bar-icon" viewBox="0 0 16 16" id = "buttonHome" onclick="buttonHome()">
+                        <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-house-door-fill nav-bar-icon-2" viewBox="0 0 16 16">
+                        <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-person-fill nav-bar-icon-2" viewBox="0 0 16 16" id = "profileButton" onclick="buttonProfile()">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                    </svg>
+                </div>
             </div>
         </nav>
     </div> 
-
-
-
 
     <!-- <button id="clearButton" class="">Clear Details</button> -->
     <!-- <button id="getButton" onclick="getData()">Get Details</button> -->

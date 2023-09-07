@@ -733,3 +733,20 @@ getButtonEl.addEventListener("click", () => {
     // fetchWeather(searchInputEl.value);
 })
 
+let buttonHomeEl = document.getElementById("buttonHome");
+
+let buttonProfileEl = document.getElementById("buttonProfile");
+
+let profileContainerEl = document.getElementById("profileContainer");
+
+
+
+function buttonProfile() {
+    weatherContainerEl.classList.add("d-none");
+    profileContainerEl.classList.remove("d-none");
+}
+
+function buttonHome() {
+    weatherContainerEl.classList.remove("d-none");
+    profileContainerEl.classList.add("d-none");
+}

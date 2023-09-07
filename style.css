@@ -48,6 +48,7 @@
 .bg-image-sunny {
     background-image: url("weather-pics/Rectangle\ 204.png");
     background-size: cover;
+    width: 414px;
     height: 1000px;
     background-position: top center;
     background-repeat: no-repeat;
@@ -89,18 +90,13 @@
 
 .small-container {
     border-width: 1px;
-    /*    background-color: rgba(255, 255, 255, 0.2); */
     background-color: transparent;
-    /*     rgba(8, 85, 113, 0.6)
- */
-    /* rgba(48,112,200,255) */
-
     text-align: center;
     border-radius: 16px;
     width: 120px;
     height: 120px;
     margin-top: 15px;
-    margin-left: 15px;
+    margin-left: 28px;
 }
 
 .small-container-2 {
@@ -213,4 +209,95 @@
 
 .bottom-nav-height {
     height: 40px;
+    width: 414px;
 }
+
+.nav-bar-icon {
+    margin-left: 38px;
+}
+
+.nav-bar-icon-2 {
+    margin-left: 100px;
+}
+
+.nav-bar-icon-3 {
+    margin-left: 99px;
+}
+
+.nav-bar-icon:hover {
+    fill: orange;
+}
+
+.nav-bar-icon-2:hover {
+    fill: orange;
+}
+
+.nav-bar-icon-3:hover {
+    fill: orange;
+}
+
+.profile-container {
+    height: 1000px;
+    width: 414px;
+    background-image: url(weather-pics/Rectangle\ 204.png);
+    background-size: cover;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    margin-top: 50%;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  .flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+  .profile {
+    height: 150px;
+    width: 150px;
+    margin-top: 10px;
+  }
+
+  .profile-name {
+    font-size: 18px;
+    padding-top: 10px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .profile-desc {
+    font-size: 16px;
+  }
+
