@@ -224,15 +224,7 @@
     margin-left: 99px;
 }
 
-.nav-bar-icon:hover {
-    fill: orange;
-}
-
-.nav-bar-icon-2:hover {
-    fill: orange;
-}
-
-.nav-bar-icon-3:hover {
+.nav-bar-icon:hover, .nav-bar-icon-2:hover, .nav-bar-icon-3:hover {
     fill: orange;
 }
 
@@ -241,6 +233,10 @@
     width: 414px;
     background-image: url(weather-pics/Rectangle\ 204.png);
     background-size: cover;
+} 
+
+.profile-name-container {
+    margin-top: 150px;
 }
 
 .flip-card {
@@ -274,14 +270,14 @@
   }
   
   .flip-card-front {
-    background-color: #bbb;
-    color: black;
+   background-color: black;
+   border-radius: 15px;
   }
   
   .flip-card-back {
-    background-color: #2980b9;
-    color: white;
+    background-color: black;
     transform: rotateY(180deg);
+    border-radius: 15px;
   }
 
   .profile {
@@ -294,10 +290,57 @@
     font-size: 18px;
     padding-top: 10px;
     font-weight: 700;
+    color: #34C8D9;
+    font-style: italic;
     text-align: center;
   }
 
   .profile-desc {
     font-size: 16px;
+    color: #34C8D9;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
   }
 
+.orange-line {
+    height: 100px;
+    margin-top: 20px;
+    margin-right: 62px;
+    position: absolute;
+}
+
+.green-line {
+    height: 100px;
+    margin-top: 18px;
+    position: absolute;
+    margin-left: 33px;
+}
+
+.blue-line {
+    height: 100px;
+    margin-top: 20px;
+    position: absolute;
+    margin-left: 85px;
+}
+
+.pink-line {
+    height: 100px;
+    margin-top: 20px;
+    position: absolute;
+    margin-left: 110px;
+}
+
+.purpel-line {
+    height: 100px;
+    margin-top: 20px;
+    position: absolute;
+    margin-left: 150px;
+}
+
+.hr-tag {
+    background-color: orange;
+    height: 1px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
