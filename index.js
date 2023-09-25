@@ -123,9 +123,9 @@ function getWeatherDetails(weather, locationId) {
 
     currentConditionEl.textContent = weather.weather[0].description;
 
-    feelsLikeValueEl.textContent = weather.main.feels_like + "°";
+    feelsLikeValueEl.textContent = Math.ceil(weather.main.feels_like) + "°C";
 
-    windSpeedValueEl.textContent = weather.wind.speed + "kmph";
+    windSpeedValueEl.textContent = Math.ceil(weather.wind.speed) + "" + "km/hr";
 
     humidityValueEl.textContent = weather.main.humidity + "%";
 
@@ -136,7 +136,7 @@ function getWeatherDetails(weather, locationId) {
     counteryValueEl.textContent = weather.sys.country;
 
 
-    mainTempEl.textContent = Math.round(weather.main.temp) + "°";
+    mainTempEl.textContent = Math.ceil(weather.main.temp) + "°";
 
     mainCityNameEl.textContent = weather.name;
     mainCityNameEl.style.color = "white";
@@ -733,6 +733,40 @@ getButtonEl.addEventListener("click", () => {
     // fetchWeather(searchInputEl.value);
 })
 
+
+function fetchWeatherByCoorde() {
+
+    navigator.geolocation.getCurrentPosition((success) => {
+        let {
+            latitude,
+            longitude
+        } = success.coords;
+
+        let url3 = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric`;
+
+        let apiKey2 = "de83a78c1097b1d30a7a971a46df4b4c";
+
+        fetch(url3 + `&appid=${apiKey2}`)
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data) {
+                console.log(data);
+                getWeatherDetails(data);
+            });
+
+    });
+
+}
+
+function getLocation() {
+    fetchWeatherByCoorde();
+    getWeatherDetails();
+}
+
+
+let locationParaEl = document.getElementById("locationPara");
+
 let buttonHomeEl = document.getElementById("buttonHome");
 
 let buttonProfileEl = document.getElementById("buttonProfile");
@@ -750,3 +784,5 @@ function buttonHome() {
     weatherContainerEl.classList.remove("d-none");
     profileContainerEl.classList.add("d-none");
 }
+
+

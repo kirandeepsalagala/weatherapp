@@ -33,6 +33,13 @@
     margin-left: 5px;
 }
 
+.location-detector {
+    margin-left: 25px;
+    background-color: #173642;
+    width: 40px;
+    border-radius: 10px;
+}
+
 /* .bg-image {
     background-image: url("https://i.pinimg.com/1200x/ab/36/dd/ab36dd79129e65310c6d45aedb606691.jpg");
     height: 100px;
