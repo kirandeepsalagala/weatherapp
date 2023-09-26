@@ -51,6 +51,8 @@ let smallHazeEl = document.getElementById("smallHaze");
 
 // let sunContainerSmallEl = document.getElementById("sunContainerSmall");
 
+let spinnerEl = document.getElementById("spinner");
+
 
 
 
@@ -117,6 +119,7 @@ let nowConditionEl = document.getElementById("nowCondition");
 function getWeatherDetails(weather, locationId) {
 
     // console.log(weather);
+    spinnerEl.classList.add("d-none");
 
     let resultConatainer = document.createElement("div");
     weatherContainerEl.appendChild(resultConatainer);
@@ -666,7 +669,7 @@ function getWeatherDetails(weather, locationId) {
 }
 
 
-function sevenDaysWeather(list,) {
+function sevenDaysWeather(list) {
     
     console.log(list);
 
@@ -723,6 +726,7 @@ getButtonEl.addEventListener("click", () => {
         return nameErrEl.classList.remove("d-none");
 
     } else {
+        spinnerEl.classList.remove("d-none");
         fetchWeather(searchInputEl.value);
         searchInputEl.value = "";
         nameErrEl.classList.add("d-none");
@@ -756,6 +760,8 @@ function fetchWeatherByCoorde() {
             });
 
     });
+    
+    spinnerEl.classList.remove("d-none");
 
 }
 
