@@ -351,3 +351,9 @@
     margin-right: 20px;
     margin-left: 20px;
 }
+
+.hourly-fore-container {
+    width: 344px;
+    height:550px;
+    background-color: red;
+}

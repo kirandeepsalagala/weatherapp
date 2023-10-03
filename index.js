@@ -779,16 +779,24 @@ let buttonProfileEl = document.getElementById("buttonProfile");
 
 let profileContainerEl = document.getElementById("profileContainer");
 
+let hourlyForecastContainerEl = document.getElementById('hourlyForecastContainer');
+
 
 
 function buttonProfile() {
     weatherContainerEl.classList.add("d-none");
+    // hourlyForecastContainerEl.classList.add("d-none");
     profileContainerEl.classList.remove("d-none");
 }
 
 function buttonHome() {
     weatherContainerEl.classList.remove("d-none");
     profileContainerEl.classList.add("d-none");
+    // hourlyForecastContainerEl.classList.add("d-none");
 }
 
-
+// function buttonHourlyForecast() {
+//     weatherContainerEl.classList.add("d-none");
+//     profileContainerEl.classList.add("d-none");
+//     hourlyForecastContainerEl.classList.remove("d-none");
+// }
